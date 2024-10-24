@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeOfficer Collections</title>
+    <style>
+        @font-face {
+            font-family: 'cocomut';
+            src: url(./fonts_1/FontsFree-Net-cocomat-pro-medium.ttf);
+        }
+        @font-face {
+            font-family: 'space-grotesk';
+            src: url(./fonts_1/SpaceGrotesk-VariableFont_wght.ttf);
+        }
+        @font-face{
+            font-family: 'poppins-semibold';
+            src: url(./fonts_1/Poppins-SemiBold.ttf);
+        }
+        @font-face {
+            font-family: 'poppins-extralight';
+            src: url(./fonts_1/Poppins-ExtraLight.ttf);
+        }
+        body{
+            margin-top: 0%;
+            margin-bottom: 0%;
+            margin-left: 0%;
+            margin-right: 0%;
+            background-color: #000000;
+        }
+        .header{
+            position: relative;
+            display: flex;
+            height: 100px;
+            background-color: #000000;
+            align-items: center;
+            font-family: 'cocomut';
+            font-size: 13px;
+            z-index: 5;
+            
+            .navb_hr{
+                position: absolute;
+                top: 99%;
+                border: none;
+                width: 100%;
+                height: 2px;
+                margin: 0;
+                z-index: -1;
+            }
+            .so_logonav{
+                position: relative;
+                left: 22%;
+            }
+            .so_logonav img{
+                width: 270px;
+                height: 80px;
+            }
+            .navb{
+                position: relative;
+                display: flex;
+                align-items: center;
+                left: 30%;
+            }
+            .ac_logonav{
+                border-style: none;
+                border-radius: 100px;
+                line-height: 0;
+                display: block;
+                width: 40px;
+                height: 34px;
+            }
+            .navb1h, .navb1col, .navb1newa, .navb1mo, .navb1logo{
+                margin-left: 40px;
+
+            }
+            .dropdown{
+                position: relative;
+                display: flex;
+                margin-left: 55px;
+                align-items: center;
+            }
+            .dropbtn{
+                display: flex;
+                background-color: #000000;
+                width: 25px;
+                height: 18px; 
+                padding: 0;
+                border: 0;
+                cursor: pointer;
+                align-items: center;
+            }
+            .dropbtn img{
+                    max-width: 100%;
+            }
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                background-color: #000000;
+                min-width: 150px;
+                margin-top: 215px;
+                border: 1.3px solid #ceff1c;
+                border-radius: 5px;
+            }
+            .dropdown-content a{
+                color: rgb(255, 255, 255);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .hr_dropdown{
+                background-color: #ffffff;
+                width: 120px;
+                height: 1.5px;
+                border: 0;
+                border-radius: 50px;
+            }
+            .dropdown a:hover{
+                background-color: #7a7979;
+            }
+            .show{
+                display: block;
+            }
+        }
+        .pg1{
+            display: flex;
+            position: relative;
+            width: 1690.67px;
+            height: 2440px;
+            justify-content: center;
+            align-items: center;
+            
+            .pg1img{
+                width: 1690.67px;
+                height: 2440px;
+            }
+            .prdct_containr{
+                display: block;
+                position: absolute;
+                background-color: #ffffff;
+                width: 1600px;
+                height: 2280px;
+            }
+            .head_img1{
+                position: absolute;
+                max-width: 100%;
+            }
+            .prdct_headtxt{
+                position: absolute;
+                font-family: 'space-grotesk';
+                font-weight: lighter;
+                font-size: 35px;
+                top: 11%;
+                left: 44%;
+            }
+            .prdcts_collection_lib_1{
+                position: absolute;
+                width: auto;
+                height: auto;
+                top: 25%;
+                
+                .prdct_lib_1{
+                    position: absolute;
+                    display: flex;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 5px;
+
+                    ._coll-prdct-img-a{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-a-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-a{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-a{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-a{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_1:hover{
+                    ._coll-prdct-img-a{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-a-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-a{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .prdct_lib_2{
+                    position: absolute;
+                    display: flex;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 411.25px;
+
+                    ._coll-prdct-img-b{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-b-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-b{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-b{
+                        font-family: 'poppins-extralight';
+                        color: #8f0f0f;
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-b{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_2:hover{
+                    ._coll-prdct-img-b{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-b-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-b{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .prdct_lib_3{
+                    position: absolute;
+                    display: flex;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 817.5px;
+
+                    ._coll-prdct-img-c{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-c-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-c{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-c{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-c{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_3:hover{
+                    ._coll-prdct-img-c{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-c-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-c{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .prdct_lib_4{
+                    position: absolute;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 1223.75px;
+
+                    ._coll-prdct-img-d{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-d-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-d{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-d{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-d{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_4:hover{
+                    ._coll-prdct-img-d{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-d-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-d{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            .prdcts_collection_lib_2{
+                position: absolute;
+                width: auto;
+                height: auto;
+                top: 55%;
+
+                .prdct_lib_5{
+                    position: absolute;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 5px;
+
+                    ._coll-prdct-img-e{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-e-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-e{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-e{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-e{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_5:hover{
+                    ._coll-prdct-img-e{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-e-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-e{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .prdct_lib_6{
+                    position: absolute;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 411.25px;
+
+                    ._coll-prdct-img-f{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-f-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-f{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-f{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-f{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_6:hover{
+                    ._coll-prdct-img-f{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-f-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-f{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .prdct_lib_7{
+                    position: absolute;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 817.5px;
+
+                    ._coll-prdct-img-g{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-g-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-g{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-g{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-g{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_7:hover{
+                    ._coll-prdct-img-g{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-g-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-g{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+                .prdct_lib_8{
+                    position: absolute;
+                    width: 371.25px;
+                    height: 425px;
+                    top: 50%;
+                    left: 1223.75px;
+
+                    ._coll-prdct-img-h{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                    }
+                    ._coll-prdct-img-h-onhover{
+                        max-width: 100%;
+                        position: absolute;
+                        transition: opacity 0.3s ease;
+                        opacity: 0;
+                    }
+                    ._coll-prdct-head-h{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 15px;
+                        top: 75%;
+                    }
+                    ._coll-prdct-price-h{
+                        font-family: 'poppins-extralight';
+                        position: absolute;
+                        text-align: left;
+                        font-size: 17px;
+                        top: 80.5%;
+                    }
+                    .prdct_coll-btn-h{
+                        visibility: hidden;
+                        opacity: 0;
+                        font-family: 'space-grotesk';
+                        position: absolute;
+                        background-color: #d79855;
+                        color: #000000;
+                        width: 373.75px;
+                        height: 28px;
+                        text-align: center;
+                        text-decoration: none;
+                        top: 93%;
+                        align-content: center;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                }
+                .prdct_lib_8:hover{
+                    ._coll-prdct-img-h{
+                        opacity: 0;
+                    }
+                    ._coll-prdct-img-h-onhover{
+                        opacity: 1;
+                    }
+                    .prdct_coll-btn-h{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a class="so_logonav"><img src="./image_group/logo_png/shoeofficer_logo.png" alt="Failed to load"></a>
+        <div class="navb">
+            <a class="navb1h" href="./sofWeb1.html" style="color: #ffffff; text-decoration: none;">Home</a>
+            <a class="navb1col" href="./sofcollection1.html" style="color: #ffffff; text-decoration: none;">Collection</a>
+            <a class="navb1newa" href="Url" style="color: #ffffff; text-decoration: none;">New Arrivals</a>
+            <a class="navb1mo" href="Url" style="color: #ffffff; text-decoration: none;">More</a>            
+            <a class="navb1logo" href="Url" style="color: #ffffff;max-width: 0px; text-decoration: none; border: none;">
+            <img class="ac_logonav" src="./image_group/logo_png/ACLOGO.png" alt="Failed to load">
+            </a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    <img src="./image_group/logo_png/Screenshot (86).png" alt="Failed to load">
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="Url">Profiles</a>
+                    <a href="Url">My Orders</a>
+                    <a href="Url">My Wallet</a>
+                    <hr class="hr_dropdown">
+                    <a href="Url">My Account</a>
+                </div>
+            </div>
+        </div>
+        <hr class="navb_hr" color="#ceff1c">
+    </div>
+    <div class="pg1">
+        <img class="pg1img" src="./image_group/collection_img grp/bg/pg1back.png" alt="failed to load">
+        <div class="prdct_containr">
+            <div>
+                <img class="head_img1" src="./image_group/collection_img grp/bg/shoe-shelf-imgbg.png" alt="failed to load">
+            </div>
+            <h1 class="prdct_headtxt">All Products</h1>
+            <div class="prdcts_collection_lib_1">
+                <div class="prdct_lib_1">
+                    <img class="_coll-prdct-img-a" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-a/air-jordan-1-low-shoes-zTWr01 (2).png" alt="failed to load">
+                    <img class="_coll-prdct-img-a-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-a/air-jordan-hoverimg.png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-a">Air Jordan 1 Low</h2>
+                    <h2 class="_coll-prdct-price-a">₹ 8,995.00</h2>
+                    <a class="prdct_coll-btn-a" href="product-page">Add to Cart</a>
+                </div>
+                <div class="prdct_lib_2">
+                    <img class="_coll-prdct-img-b" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-b/TATUM-3(FINAL FRONT).png" alt="failed to load">
+                    <img class="_coll-prdct-img-b-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-b/TATUM-3(FINAL HOVER).png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-b">Tatum 3 "Welcome to the Garden"</h2>
+                    <h2 class="_coll-prdct-price-b">Coming Soon</h2>
+                    <a class="prdct_coll-btn-b" href="product-page">Notify Me</a>
+                </div>
+                <div class="prdct_lib_3">
+                    <img class="_coll-prdct-img-c" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-c/Air-Jordan 4 Retro(Orchid).png" alt="failed to load">
+                    <img class="_coll-prdct-img-c-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-c/Air-Jordan 4 Retro(Orchid)-Hover.png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-c">Air Jordan 4 Retro "Orchid"</h2>
+                    <h2 class="_coll-prdct-price-c">₹ 18,080.00</h2>
+                    <a class="prdct_coll-btn-c" href="product-page">Add to Cart</a>
+                </div>
+                <div class="prdct_lib_4">
+                    <img class="_coll-prdct-img-d" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-d/Air Jordan 6 Retro(FINAL).png" alt="failed to load">
+                    <img class="_coll-prdct-img-d-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-d/Air Jordan 6 Retro(HOVER).png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-d">Air Jordan 6 Retro "White/Black"</h2>
+                    <h2 class="_coll-prdct-price-d">₹ 16,816.95</h2>
+                    <a class="prdct_coll-btn-d" href="product-page">Add to Cart</a>
+                </div>
+            </div>
+            <div class="prdcts_collection_lib_2">
+                <div class="prdct_lib_5">
+                    <img class="_coll-prdct-img-e" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-e/Samba OG Shoes(FINAL).png" alt="failed to load">
+                    <img class="_coll-prdct-img-e-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-e/Samba OG Shoes(HOVER).png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-e">Samba OG Shoes</h2>
+                    <h2 class="_coll-prdct-price-e">₹ 10,999.00</h2>
+                    <a class="prdct_coll-btn-e" href="product-page">Add to Cart</a>
+                </div>
+                <div class="prdct_lib_6">
+                    <img class="_coll-prdct-img-f" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-f/SL 72 RS Shoes(FINAL).png" alt="failed to load">
+                    <img class="_coll-prdct-img-f-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-f/SL 72 RS Shoes(HOVER).png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-f">SL 72 RS Shoes</h2>
+                    <h2 class="_coll-prdct-price-f">₹ 9,999.00</h2>
+                    <a class="prdct_coll-btn-f" href="product-page">Add to Cart</a>
+                </div>
+                <div class="prdct_lib_7">
+                    <img class="_coll-prdct-img-g" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-g/Superstar Shoes.png" alt="failed to load">
+                    <img class="_coll-prdct-img-g-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-g/Superstar Shoes(HOVER).png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-g">Superstar Shoes</h2>
+                    <h2 class="_coll-prdct-price-g">₹ 6,299.59</h2>
+                    <a class="prdct_coll-btn-g" href="product-page">Add to Cart</a>
+                </div>
+                <div class="prdct_lib_8">
+                    <img class="_coll-prdct-img-h" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-h/ADI DASSLER STAN SMITH W(FINAL).png" alt="failed to load">
+                    <img class="_coll-prdct-img-h-onhover" src="./image_group/collection_img grp/product_covers_collections/coll-prdct-h/ADI DASSLER STAN SMITH W(HOVER).png" alt="failed to load">
+                    <h2 class="_coll-prdct-head-h">ADI DASSLER STAN SMITH W</h2>
+                    <h2 class="_coll-prdct-price-h">₹ 4,800.00</h2>
+                    <a class="prdct_coll-btn-h" href="product-page">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>

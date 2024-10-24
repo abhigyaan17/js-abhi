@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoeOfficer</title>
+    <style>
+        @font-face{
+            font-family: 'poppins-semibold';
+            src: url(./fonts_1/Poppins-SemiBold.ttf);
+        }
+        @font-face {
+            font-family: 'poppins-extralight';
+            src: url(./fonts_1/Poppins-ExtraLight.ttf);
+        }
+        @font-face {
+            font-family: 'cocomut';
+            src: url(./fonts_1/FontsFree-Net-cocomat-pro-medium.ttf);
+        }
+        @font-face {
+            font-family: 'space-grotesk';
+            src: url(./fonts_1/SpaceGrotesk-VariableFont_wght.ttf);
+        }
+        @font-face {
+            font-family: 'trend';
+            src: url(./fonts_1/TrendSlabFour.ttf);
+        }
+        body {
+            background-color: rgb(0, 0, 0);
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .header{
+            position: relative;
+            display: flex;
+            height: 100px;
+            background-color: #000000;
+            align-items: center;
+            font-family: 'cocomut';
+            font-size: 13px;
+            z-index: 5;
+            
+            .navb_hr{
+                position: absolute;
+                top: 99%;
+                border: none;
+                width: 100%;
+                height: 2px;
+                margin: 0;
+                z-index: -1;
+            }
+            .so_logonav{
+                position: relative;
+                left: 22%;
+            }
+            .so_logonav img{
+                width: 270px;
+                height: 80px;
+            }
+            .navb{
+                position: relative;
+                display: flex;
+                align-items: center;
+                left: 30%;
+            }
+            .ac_logonav{
+                border-style: none;
+                border-radius: 100px;
+                line-height: 0;
+                display: block;
+                width: 40px;
+                height: 34px;
+            }
+            .navb1h, .navb1col, .navb1newa, .navb1mo, .navb1logo{
+                margin-left: 40px;
+
+            }
+            .dropdown{
+                position: relative;
+                display: flex;
+                margin-left: 55px;
+                align-items: center;
+            }
+            .dropbtn{
+                display: flex;
+                background-color: #000000;
+                width: 25px;
+                height: 18px; 
+                padding: 0;
+                border: 0;
+                cursor: pointer;
+                align-items: center;
+            }
+            .dropbtn img{
+                    max-width: 100%;
+            }
+            .dropdown-content{
+                display: none;
+                position: absolute;
+                background-color: #000000;
+                min-width: 150px;
+                margin-top: 215px;
+                border: 1.3px solid #ceff1c;
+                border-radius: 5px;
+            }
+            .dropdown-content a{
+                color: rgb(255, 255, 255);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .hr_dropdown{
+                background-color: #ffffff;
+                width: 120px;
+                height: 1.5px;
+                border: 0;
+                border-radius: 50px;
+            }
+            .dropdown a:hover{
+                background-color: #7a7979;
+            }
+            .show{
+                display: block;
+            }
+        }
+        .frontpgbg1{
+            z-index: 1;
+        }
+        .frontpg2{
+            display: flex;
+            width: 1690.67px;
+            height: 432px;
+            
+        .menimgfrnt, .womimgfrnt, .casimgfrnt{
+            width: 563.55px;
+            height: 432px;
+            opacity: 85%;
+        }
+        .mensectfront{
+            position: relative;
+            width: 563.55px;
+            height: 432px;
+            overflow: hidden;
+        }
+        .menimgfrnt{
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .mensectfront:hover .menimgfrnt{
+            transform: scale(1.2);
+        }
+        .womensectfront{
+            position: relative;
+            width: 563.55px;
+            height: 432px;
+            overflow: hidden;
+        }
+        .womimgfrnt{
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .womensectfront:hover .womimgfrnt{
+            transform: scale(1.2);
+        }
+        .casualsectfront{
+            position: relative;
+            width: 563.55px;
+            height: 432px;
+            overflow: hidden;
+        }
+        .casimgfrnt{
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .casualsectfront:hover .casimgfrnt{
+            transform: scale(1.2);
+        }
+        .mensecthead, .womensecthead, .casecthead{
+            font-family: 'space-grotesk';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #ffffff; /* Change as needed */
+            background: none; /* Optional background for readability */
+            padding: 5px; /* Optional padding */
+            text-align: center; /* Centers the text */
+        }
+        }
+        .frontpg3{
+            position: relative;
+            width: 1690.67px;
+            height: 1080px;
+        
+        .pg3top{
+            height: 75px;
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            align-content: center;
+        }
+        .pg3toptext{
+            font-family: 'poppins-semibold';
+            position: absolute;
+            color: #000000;
+            top: 5%;
+            left: 31.7%;
+            font-size: 67px;
+            background-image: url(./image_group/logo_png/19d086eb-3ae2-4756-8ffc-268dd55eeb22.jpg);
+            background-clip: content-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pg3toprect1, .pg3toprect2{
+            position: absolute;
+            width: 300px;
+            height: 5px;
+            background: #000000;
+        }
+        .pg3toprect1{
+            left: 9.8%;
+        }
+        .pg3toprect2{
+            right: 10%;
+        }
+        .prodctlist_cvrleft{
+            position: absolute;
+            height: 1080px;
+            width: 50%;
+            top: 0%;
+            left: 0%;
+        }
+        .leftprdct1{
+            position: absolute;
+            display: flex;
+            width: 615px;
+            height: 156px;
+            top: 25%;
+            left: 5%;
+        }
+        .leftimg1{
+            width: 315px;
+            height: 156px;
+            border: 2px solid #000000;
+            border-radius: 6px;
+        }
+        .leftprdct2{
+            position: absolute;
+            display: flex;
+            width: 615px;
+            height: 156px;
+            top: 50%;
+            left: 5%;
+        }
+        .leftimg2{
+            max-width: 100%;
+            border: 2px solid #000000;
+            border-radius: 6px;
+        }
+        .leftprdct3{
+            position: absolute;
+            display: flex;
+            width: 615px;
+            height: 156px;
+            top: 75%;
+            left: 5%;
+        }
+        .leftimg3{
+            max-width: 100%;
+            border: 2px solid #000000;
+            border-radius: 6px;
+        }
+        .prodctlist_cvrright{
+            position: absolute;
+            height: 1080px;
+            width: 50%;
+            top: 0%;
+            right: 0%;
+        }
+        .rightprdct1{
+            position: absolute;
+            display: flex;
+            width: 615px;
+            height: 156px;
+            top: 25%;
+            right: 5%;
+            justify-content: flex-end;
+        }
+        .rightimg1{
+            right: 0%;
+            max-width: 100%;
+            border: 2px solid #000000;
+            border-radius: 6px;
+        }
+        .rightprdct2{
+            position: absolute;
+            display: flex;
+            width: 615px;
+            height: 156px;
+            top: 50%;
+            right: 5%;
+            justify-content: flex-end;
+        }
+        .rightimg2{
+            max-width: 100%;
+            border: 2px solid #000000;
+            border-radius: 6px;
+        }
+        .rightprdct3{
+            position: absolute;
+            display: flex;
+            width: 615px;
+            height: 156px;
+            top: 75%;
+            right: 5%;
+            justify-content: flex-end;
+        }
+        .rightimg3{
+            max-width: 100%;
+            border: 2px solid #000000;
+            border-radius: 6px;
+        }
+        }
+        .frontpg4{
+            position: relative;
+            width: 1690.67px;
+            height: 1080px;
+        
+        .pg4top{
+            position: absolute;
+            display: flex;
+            width: 1690.67px;
+            height: 70px;
+            top: 0%;
+            justify-content: center;
+        }
+        .pg4toptext{
+            font-family: 'trend';
+            position: absolute;
+            font-size: 50px;
+        }
+        .pg4toprect{
+            position: absolute;
+            width: 610px;
+            height: 3.5px;
+            top: 120%;
+            background-color: #000000;
+        }
+        .lstprdct1{
+            position: absolute;
+            width: 515px;
+            height: 350px;
+            right: 15%;
+            top: 25%;
+        }
+        .lstprdct2{
+            position: absolute;
+            width: 515px;
+            height: 350px;
+            right: 15%;
+            top: 65%;
+        }
+        .lstprdct1txt{
+            font-family: 'space-grotesk';
+            position: absolute;
+            font-size: 24px;
+            color: #000000;
+            left: 20%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+        .lstprdct2txt{
+            font-family: 'space-grotesk';
+            position: absolute;
+            font-size: 24px;
+            color: #000000;
+            left: 35%;
+            margin-top: 0%;
+            margin-bottom: 0%;
+        }
+        .lstprdctbuybtn1{
+            font-family: 'poppins-extralight';
+            text-decoration: none;
+            font-size: 20px;
+            position: absolute;
+            color: #000000;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 17px;
+            border: 1.5px solid #000000;
+            top: 86%;
+            left: 45%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .lstprdctbuybtn1:hover{
+            color: #ddd;
+            background-color: #000000;
+        }
+        .lstprdctbuybtn2{
+            font-family: 'poppins-extralight';
+            text-decoration: none;
+            font-size: 20px;
+            position: absolute;
+            color: #000000;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 17px;
+            border: 1.5px solid #000000;
+            top: 86%;
+            left: 45%;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .lstprdctbuybtn2:hover{
+            color: #ddd;
+            background-color: #000000;
+        }
+        .lstprdct1-imgcontainer{
+            position: relative;
+            display: inline-block;
+        }
+        .overlay1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .overlay1:hover{
+            opacity: 1;
+        }
+        .lstprdct2-imgcontainer{
+            position: relative;
+            display: inline-block;
+        }
+        .overlay2{
+            position: absolute;
+            top: 0px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .overlay2:hover{
+            opacity: 1;
+        }
+        }
+        .frontpg5{
+            position: relative;
+            
+            .pg5top{
+                position:absolute;
+                top: 2%;
+                left: 4%;
+                width: 700px;
+                height: 80px;
+                
+                .pg5toptxt{
+                    position: absolute;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-family: 'space-grotesk';
+                    position: absolute;
+                    background-color: #a5b767;
+                    font-size: 40px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding: 5px;
+                }
+            }
+            .pg5prct1{
+                position: absolute;
+                display: flex;
+                width: 700px;
+                height: 172px;
+                top: 25%;
+                align-items: center;
+                left: 3%;
+                
+                .pg5prdct1img{
+                position: absolute;
+                max-width: 50%;
+                border-top-right-radius:20px;
+                border-bottom-left-radius: 20px;
+                }  
+                .pg5prct1txt{
+                    font-family: 'poppins-extralight';
+                    font-weight: bold;
+                    position: absolute;
+                    margin-top: 0%;
+                    margin-bottom: 0%;
+                    left: 50%;
+                }
+            }
+            .pg5prct2{
+                position: absolute;
+                display: flex;
+                width: 700px;
+                height: 172px;
+                top: 45%;
+                align-items: center;
+                left: 3%;
+                
+                .pg5prdct2img{
+                position: absolute;
+                max-width: 50%;
+                border-top-right-radius:20px;
+                border-bottom-left-radius: 20px;
+                }  
+                .pg5prct2txt{
+                    font-family: 'poppins-extralight';
+                    font-weight: bold;
+                    position: absolute;
+                    margin-top: 0%;
+                    margin-bottom: 0%;
+                    left: 50%;
+                }
+            }
+            .pg5prct3{
+                position: absolute;
+                display: flex;
+                width: 700px;
+                height: 172px;
+                top: 65%;
+                align-items: center;
+                left: 3%;
+                
+                .pg5prdct3img{
+                position: absolute;
+                max-width: 50%;
+                border-top-right-radius:20px;
+                border-bottom-left-radius: 20px;
+                }  
+                .pg5prct3txt{
+                    font-family: 'poppins-extralight';
+                    font-weight: bold;
+                   position: absolute;
+                   margin-top: 0%;
+                   margin-bottom: 0%;
+                   left: 50%;
+                }
+            }
+            .pg5prct4{
+                position: absolute;
+                display: flex;
+                width: 700px;
+                height: 172px;
+                top: 85%;
+                align-items: center;
+                left: 3%;
+                
+                .pg5prdct4img{
+                position: absolute;
+                max-width: 50%;
+                border-top-right-radius:20px;
+                border-bottom-left-radius: 20px;
+                }  
+                .pg5prct4txt{
+                    font-family: 'poppins-extralight';
+                    font-weight: bold;
+                    position: absolute;
+                    margin-top: 0%;
+                    margin-bottom: 0%;
+                    left: 50%;
+                }
+            }
+            
+        }
+        .frontpg6{
+            position: relative;
+            display: flex;
+            background-color: #000000;
+            width: 1690.67px;
+            height: 200px;
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 50px;
+
+            .pg6img{
+                position: absolute;
+                max-width: 40%;
+            }
+            
+        }
+        .footer{
+            position: relative;
+            display: flex;
+
+            .headfeedback{
+                font-family: 'space-grotesk';
+                color: #ffffff;
+                position: absolute;
+                top: 25%;
+                left: 25%;
+            }
+            .feedtxt{
+                font-family: 'poppins-extralight';
+                position: absolute;
+                color: #ffffff;
+                top: 40%;
+                left: 25%;
+            }
+            .headcontact{
+                font-family: 'space-grotesk';
+                color: #ffffff;
+                position: absolute;
+                top: 25%;
+                left: 47%;
+            }
+            .contactxt{
+                font-family: 'poppins-extralight';
+                position: absolute;
+                color: #ffffff;
+                top: 40%;
+                left: 47%;   
+            }
+            .twitterbtn{
+                position: absolute;
+                top: 30%;
+                left: 67%;
+                scale: 70%;
+            }
+            .instabtn{
+                position: absolute;
+                top: 30%;
+                left: 72%;
+                scale: 70%;
+            }
+            .footerlabel_so{
+                font-family: 'poppins-extralight';
+                color: #ffffff;
+                position: absolute;
+                top: 81%;
+                left: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a class="so_logonav"><img src="./image_group/logo_png/shoeofficer_logo.png" alt="Failed to load"></a>
+        <div class="navb">
+            <a class="navb1h" href="./sofWeb1.html" style="color: #ffffff; text-decoration: none;">Home</a>
+            <a class="navb1col" href="./sofcollection1.html" style="color: #ffffff; text-decoration: none;">Collection</a>
+            <a class="navb1newa" href="Url" style="color: #ffffff; text-decoration: none;">New Arrivals</a>
+            <a class="navb1mo" href="Url" style="color: #ffffff; text-decoration: none;">More</a>            
+            <a class="navb1logo" href="Url" style="color: #ffffff;max-width: 0px; text-decoration: none; border: none;">
+            <img class="ac_logonav" src="./image_group/logo_png/ACLOGO.png" alt="Failed to load">
+            </a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    <img src="./image_group/logo_png/Screenshot (86).png" alt="Failed to load">
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="Url">Profiles</a>
+                    <a href="Url">My Orders</a>
+                    <a href="Url">My Wallet</a>
+                    <hr class="hr_dropdown">
+                    <a href="Url">My Account</a>
+                </div>
+            </div>
+        </div>
+        <hr class="navb_hr" color="#ceff1c">
+    </div>
+    <div class="frontpg1">
+        <img style="width: 1690.67px;height: 1080px;object-fit: fill;" src="./image_group/pagebackgr/front pic_1greylogoust.png" alt="Failed to load image">
+    </div>
+    <div class="frontpg2">
+        <div class="mensectfront" style="width: 563.55px;height: 432px;display: flex;">
+            <img class="menimgfrnt" src="./image_group/pg2covrs/mensect.jpg" alt="failed to load" title="Men's">
+            <div class="mensecthead">MEN'S</div>
+        </div>
+        <div class="womensectfront">
+            <img class="womimgfrnt" src="./image_group/pg2covrs/womensect.png" alt="failed to load" title="Women's">
+            <div class="womensecthead">WOMEN'S</div>
+        </div>
+        <div class="casualsectfront">
+            <img class="casimgfrnt" src="./image_group/pg2covrs/casualsect.jpg" alt="failed to load" title="Casuals">
+            <div class="casecthead">CASUALS</div>
+        </div>
+    </div>
+    <div class="frontpg3">
+        <img style="width: 1690.67px;height: 1080px;" src="./image_group/pagebackgr/pg3bg1.png" alt="failed to load">
+        <div class="pg3top">
+            <div class="pg3toptext">TOP RECOMMENDS</div>
+            <div class="pg3toprect1"></div>
+            <div class="pg3toprect2"></div>
+        </div>
+        <div class="prodctlist_cvrleft">
+            <div class="leftprdct1">
+                <img class="leftimg1" src="./image_group/pg3covrs/AIRJORDAN1.png" alt="failed to load">
+                <div>
+                    <ul dir="ltr">
+                        <li style="font-family: 'poppins-extralight';font-weight: bold;"><p>NIKE<br>Jordan 1(Chicago Red)</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="leftprdct2">
+                <img class="leftimg2" src="./image_group/pg3covrs/NIKE1.png" alt="failed to load">
+                <div>
+                    <ul dir="ltr">
+                        <li><p style="font-family: 'poppins-extralight';font-weight: bold;">NIKE<br> Jordan 1 Low OG "Chinese New Year"<br>Jan 24th, 2024</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="leftprdct3">
+                <img class="leftimg3" src="./image_group/pg3covrs/ADDAS2.png" alt="failed to load">
+                <div>
+                    <ul dir="ltr">
+                        <li><p style="font-family: 'poppins-extralight';font-weight: bold;">ADDIDAS<br> Addidas 2</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="prodctlist_cvrright">
+            <div class="rightprdct1">
+                <div>
+                    <ul dir="rtl">
+                        <li><p style="font-family: 'poppins-extralight';font-weight: bold;">NIKE<br>Air More Uptempo '96</p></li>
+                    </ul>
+                </div>
+                <img class="rightimg1" src="./image_group/pg3covrs/NIKEAIR1.png" alt="failed to load">
+            </div>
+            <div class="rightprdct2">
+                <div>
+                    <ul dir="rtl">
+                        <li><p style="font-family: 'poppins-extralight';font-weight: bold;">WILDCRAFT<br>Amphibia Sphere High Ankle Hiking Shoes</p></li>
+                    </ul>
+                </div>
+                <img class="rightimg2" src="./image_group/pg3covrs/WDC1.png" alt="failed to load">
+            </div>
+            <div class="rightprdct3">
+                <div>
+                    <ul dir="rtl">
+                        <li><p style="font-family: 'poppins-extralight';font-weight: bold;">CONVERSE<br>Converse (OG) Classic</p></li>
+                    </ul>
+                </div>
+                <img class="rightimg3" src="./image_group/pg3covrs/CONVERSE1.png" alt="failed to load">
+            </div>
+        </div>
+    </div>
+    <div class="frontpg4">
+        <img style="width: 1690.67px;height: 1080px;" src="./image_group/pagebackgr/pg4bg.png" alt="failed to load">
+        <div class="pg4top">
+            <div class="pg4toptext">LATEST ADDITIONS</div>
+            <div class="pg4toprect"></div>
+        </div>
+        <div class="lstprdct1">
+            <div class="lstprdct1-imgcontainer">
+                <img class="lstprdctimg1" style="width: 515px;height: 250px;" src="./image_group/pg4covrs/MERCULIAR1.2.png" alt="failed to load">
+                <div class="overlay1"></div>
+            </div>
+            <p class="lstprdct1txt">Nike Mercurial Superfly 9 Elite</p>
+            <a class="lstprdctbuybtn1" href="Url">Buy Now</a>
+        </div>
+        <div class="lstprdct2">
+            <div class="lstprdct2-imgcontainer">
+                <img class="lstprdctimg2" style="width: 515px;height: 250px;" src="./image_group/pg4covrs/TATUM1.3.png" alt="failed to load">
+                <div class="overlay2"></div>
+            </div>
+            <p class="lstprdct2txt">Tatum 2 'Legacy' PF</p>
+            <a class="lstprdctbuybtn2" href="Url">Buy Now</a>
+        </div>
+    </div>
+    <div class="frontpg5">
+        <img src="./image_group/pagebackgr/pg5bg2.png" alt="failed to load">
+        <div class="pg5top">
+            <ul>
+                <li class="pg5toptxt">
+                    <p style="margin-top: 0%;margin-bottom: 0%;">Find Shoes based on your 
+                       preference.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="pg5prct1">
+            <img class="pg5prdct1img" src="./image_group/pg5covers/RDTAPE2.png" alt="failed to load">
+            <ul class="pg5prct1txt" style="color: #ffffff;" dir="ltr">
+                <li>
+                    <p>Sneakers are appropriate for<br>
+                       wear or use on informal<br>
+                       occasions.
+                    </p>
+                </li>
+                <li>
+                    <p>RedTape Casual Sneakers<br>
+                       are ideal for casual,<br>
+                       everyday wear and fashion.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="pg5prct2">
+            <img class="pg5prdct2img" src="./image_group/pg5covers/CONVERSE1.png" alt="failed to load">
+            <ul class="pg5prct2txt" style="color: #ffffff;" dir="ltr">
+                <li>
+                    <p>Converse sneaker's comfort matche<br>
+                        their appearance. Despite their uncomplicated
+                        design and<br>construction, they can endure years<br>
+                        of use and damage.
+                    </p>
+                </li>
+                <li>
+                    <p>Converse Chuck 70 Canvas are one match for<br>
+                       converse, with premium canvas in archival color.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="pg5prct3">
+            <img class="pg5prdct3img" src="./image_group/pg5covers/AIRJORDAN1.png" alt="failed to load">
+            <ul class="pg5prct3txt" style="color: #ffffff;" dir="ltr">
+                <li>
+                    <p>Jordan's cultural icon status is due to<br>
+                       its history, unique design, quality<br>
+                       materials, exclusivity, and branding.
+                    </p>
+                </li>
+                <li>
+                    <p>Air Jordan 1 Chicago is a footwear<br>
+                       pioneer in Jordans.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="pg5prct4">
+            <img class="pg5prdct4img" src="./image_group/pg5covers/ADDAS2.png" alt="failed to load">
+            <ul class="pg5prct4txt" style="color: #ffffff;" dir="ltr">
+                <li>
+                    <p>Foam Trainers provide cushioning<br>
+                       and are great in shock absorption<br>
+                       for casual sport participation.
+                    </p>
+                </li>
+                <li>
+                    <p>ADDIDAS OZELLE CLOUDFOAM SHOES<br>
+                       are most suitable for foam trainers.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="frontpg6">
+        <img class="pg6img" src="./image_group/logo_png/shoeofficer_logo.png" alt="failed to load">
+    </div>
+    <div class="footer">
+        <img src="./image_group/pagebackgr/footrbg2.png" alt="failed to load">
+        <div class="headfeedback">FEEDBACK</div>
+        <p class="feedtxt">
+            Your feedback helps up to improve a lot<br>
+            Please share yourfeedback your at:<br>
+            feedback.shoeofficer@gmail.com
+        </p>
+        <div class="headcontact">CONTACT US</div>
+        <p class="contactxt">connect.shoeofficer@gmail.com</p>
+        <a href="url" class="twitterbtn">
+            <img class="twittericon" src="./image_group/logo_png/11062b_8616df6eb29e41d9a61d3677e7ace261~mv2.png" alt="failed to load">
+        </a>
+        <a href="url" class="instabtn">
+            <img class="instaicon" src="image_group/logo_png/81af6121f84c41a5b4391d7d37fce12a.png" alt="failed to load">
+        </a>
+        <p class="footerlabel_so">© 2024 by ShoeOfficer.com</p>
+    </div>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html> 
